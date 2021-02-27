@@ -1,0 +1,630 @@
+/* Стили обнуления */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+body {
+	line-height: 1;
+	color: #000;
+}
+
+/* Импортирование стилей */
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "GilroyBold";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+/*
+Жмем F1
+Пишем Google Fonts
+Выбираем import
+Пишем имя шрифта
+Убираем лишнее
+Добавляем кавычки и запись"":
+&display=swap&subset=cyrillic-ext
+*/
+
+
+
+body {
+	background-color: #111428;
+    font-size: 16px;
+	font-family: 'Gilroy';
+	line-height: 1;
+	color: #fff;
+}
+
+.header {
+	background: #111428;
+	box-shadow: 0px 6px 4px 1px rgba(0, 0, 0, 0.25);
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+	position: relative;
+}
+
+.header__container {
+	background: #111428;
+ box-shadow: 1px 2px 3px rgb(12, 10, 10);
+		width: 1400px;
+		margin: 0 auto;
+		padding: 0 20px;
+	position: fixed;
+	z-index: 20;
+	
+	
+}
+
+.header__logo {
+	display: inline-block;
+	font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    
+    margin: 0px 60px 0px 0px;
+	
+	color: #FFFFFF;
+}
+
+.header__menu {
+	display: inline-block;
+	
+}
+
+.header__list {
+	font-size: 0;
+	margin: 0px 40px 0px 0px;
+	
+}
+.header__list > li {
+	position: relative;
+	display: inline-block;
+	margin: 0px 15px 0px 0px;
+	padding: 15px;
+}
+.header__list > li::after {
+	background: url("../img/arrows/chevron-bottom.png") 0 0 no-repeat;	
+    width: 12px;
+    height: 12px;
+
+	position: absolute;
+	right: 2px;
+	top:49px	;
+    content: '';
+}
+
+	.header__list > li:hover::after{
+	background: rgb(35, 35, 37) url("../img/arrows/chevron-bottom.png") 0 0 no-repeat;  }
+   
+  
+.header__list > li:hover .header__sub-list {
+	display: block;
+}
+.header__list > li:hover .header__link {
+	color: rgb(112, 117, 115);
+	font-size: 20px;
+}
+
+.header__list > li:last-child {
+	margin-right: 0;
+}
+.header__list > li:last-child .header__sub-list {
+	left: auto;
+	right: 0;
+}
+.header__list .header__sub-link > li:last-child .header__sub-sublist {
+	left: auto;
+	right: 0;
+}
+
+.header__link {
+	display: inline-block;
+	padding: 25px 3px;
+	
+	
+	font-size: 20px;
+	font-weight: 700;
+	font-weight: bold;
+	color: #FFFFFF;
+	
+	
+	
+	
+	
+}
+
+.header__sub-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+    background: #8b8e92ea;
+    border-radius: 10px;
+    padding: 15px 20px 15px 20px;
+     
+}
+.header__sub-list > li{
+	margin: 0px 0px 10px 0px;
+	border: 1px solid transparent;
+	
+	}
+	.header__sub-list > li:last-child{
+		margin-bottom: 0;
+		}
+
+	.header__sub-list > li:hover .header__sub-link{
+			border: none;
+			text-shadow: 2px 5px 2px 6px #000;
+			}
+	.header__sub-link {
+		font-weight:600;
+		font-size: 18px;
+		line-height: 19px;
+		color: #FFFFFF;
+		padding: 5px;
+	}
+	.search__form {
+		display: inline-block;
+	}
+
+	.search__input input{
+		width: 500px;
+		height: 41px;
+		background: #111428;
+		border: 1px solid #A3A3A3;
+		box-sizing: border-box;
+		border-radius: 5px;
+		color: #fff;
+		padding: 0px 10px;
+		
+		
+		}
+	.search__input {		
+		position: relative;
+
+	}
+	.search__input::after{
+		content:'';	
+		position: absolute;
+		top: 26%;
+		right: 15px;
+		height: 18px;
+		width: 18px;
+		background: url("../img/icon.png") 0 0 no-repeat;
+		
+	}
+	.search__input input:focus{
+		outline:none;
+		box-shadow: -1px -3px 5px 3px #0a3d44;
+	}
+				
+	.form__like-wrapper {
+		display: inline-block;
+		position: relative;
+		height: 18px;
+		width: 18px;
+	}
+	.form__like{
+		display: inline-block;
+		position: absolute;
+		top: 4px;
+		
+		
+		
+	    height: 18px;
+    	width: 22px;
+		background: url("../img/Vector-3.png") 0 0 no-repeat;
+		margin: 0px 10px;
+		
+	}
+	.form__account-wrapper {
+		display: inline-block;
+		position: relative;
+		height: 18px;
+		width: 18px;
+	}
+	.form__account {
+		display: inline-block;
+		position: absolute;
+		top:-2px;
+		left: 15px;
+		
+		
+		
+	    height: 30px;
+    	width: 30px;
+		background: url("../img/Ellipse-1.png") 0 0 no-repeat;
+		margin: 0px 10px;
+
+	}
+ .arrow{
+	display: inline-block;
+	width: 12px;
+    height: 12px;
+  position: absolute;
+ left:29px;
+  top: 8px;
+		background: rgb(35, 35, 37) url("../img/arrows/chevron-bottom.png") right no-repeat;  }
+
+
+	
+	
+
+
+
+.main {
+	background: url("../img/3.png") 0 0 / cover no-repeat;
+	padding: 10px 100px;
+}
+/* H1 Стиль для заголовка */
+.main__title {
+color: #FFFFFF;
+font-family:" Gilroy";
+font-style: normal;
+font-weight: bold;
+font-size: 38px;
+line-height: 46px;
+text-align: center;
+margin:  63px 0px 10px 0px;
+}
+
+/* SingIn стиль для input */
+
+.form_sing-in{
+/* display: inline-block; */
+text-align: center;
+}
+
+.wrapper__sing-in {
+max-width: 384px; 
+margin: 0 auto;
+}
+
+
+.input__email{
+width: 384px;
+height: 50px;
+font-family: "Gilroy";
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 21px;
+color: #777777;
+background: #FFFFFF;
+border-radius: 6px;
+padding: 0px 15px;
+margin:  41px 0px 0px 0px;
+
+}
+.input__password{
+	width: 384px;
+	height: 50px;
+	font-family: "Gilroy";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 21px;
+	color: #777777;
+	background: #FFFFFF;
+	border-radius: 6px;
+	padding: 0px 15px;
+	margin:  30px 0px 0px 0px;
+	
+	}
+
+	.form__option{
+	position: relative;
+padding-left: 0px;
+	margin-top: 30px;
+	}
+
+	.form__option-input{
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.form__option-input:focus + .form__option-label::before {
+		box-shadow: 2px 2px 1px #fff;
+	}
+	.form__option-input:checked + .form__option-label::after {
+		content: "";
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		
+		background-color: blue;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+	}
+	
+
+	.form__option-label {
+		font-family: "Gilroy";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+
+		color: #FFFFFF;
+		cursor: pointer;
+		display: inline-block;
+		margin:  0px 60px 0px 0px;
+		
+	}
+	.form__option-label::before {
+		box-shadow: 2px 2px 1px rgb(8, 3, 51);
+		width: 20px;
+		height: 20px;
+		border-radius: 5px;
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: #fff; }
+
+	.account__link {
+	font-family: "Gilroy";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	left:30px;
+	text-decoration: underline;
+		 
+	color: #64B369;
+	margin-bottom: 30px;
+	}
+
+.form__button {
+   background: #337AB7;
+   border-radius: 6px;
+   font-family: "Gilroy";
+   font-style: normal;
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 29px;
+   color: #FFFFFF;
+   width: 384px;
+   height: 50px;
+  
+   box-shadow: 1px 1px 20px 0 #000000;
+   text-shadow: 1px 1px 20px #000000;
+  
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.form__button:hover {
+   border: solid #1f2731 1px;
+   background: #1f2125;
+
+   border-radius: 10px;
+   text-decoration: none;
+}
+
+.form__text {
+   font-family: "Gilroy";
+   font-style: normal;
+   font-weight: 500;
+   font-size: 19px;
+   line-height: 21px;
+   text-align: center;
+   
+   color: #FFFFFF;
+   margin: 43px 0px 20px 0px;
+}
+
+
+.form__account-text {
+	font-family: "Gilroy";
+ font-style: normal;
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 25px;
+
+ 
+ color: #FFFFFF;
+ margin: 30px 180px 0px 0px;
+ }
+ 
+ .form__account-link{
+	font-family: "Gilroy";
+ font-style: normal;
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 25px;
+ display: inline-block;
+ position: absolute;
+ /* top: -23px;
+ left:60px;  */
+ text-decoration: underline;
+ text-align: left;
+ background: #111428;
+ 
+ 
+ color: #64B369;
+ margin: -25px 0px 0px 15px;
+ }
+
+ .singin__wrapper{
+	max-width: 90%;
+	margin: 30px auto 40px;
+	text-align: center;
+	padding: 20px 0px 30px;
+ }
+ .singin__link{
+	max-width: 90%;
+	margin: 30px auto 40px;
+	text-align: center;
+	padding: 30px;
+ }
+.singin__link a{
+	margin: 0px 20px 0px 0px;
+	border-radius: 15px;
+	width: 40px;
+	height: 40px;
+
+	padding: 10px;
+	background-color: #060527;
+	
+}
+
+.singin-link a:last-child{
+	margin-bottom: 0px;
+}
+
+.account__link:hover {
+ text-decoration: underline;
+color: #1e6423;
+}
+
+.horizontal__row {
+   width: auto;
+   height: 2px;
+   background-color: #fff;
+}
+
+.horizontal__row:hover {
+	margin-top: 30;
+   width: auto;
+   height: 4px;
+   background-color: rgb(75, 75, 124);
+}
+
+
+
+.footer {
+   background-color: #111428;;
+   min-height: 160px;
+}
+
+.footer__container {
+   max-width: 80%;
+   margin: 0px auto;
+   padding: 27px 0px 40px;
+}
+
+.footer__social-media {
+   max-width: 90%;
+   margin: 30px auto 40px;
+   text-align: center;
+   padding: 40px;
+}
+
+.footer__social-text{
+font-family: "Gilroy";
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #FFFFFF;
+margin-top: 30px;
+padding-bottom: 20px;
+}
+
+.footer__social-media a{
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+   border-radius: 15px;
+   width: 40px;
+   height: 40px;
+   display: inline-block;
+   padding: 8px;
+   background-color: #03021a;
+   filter: drop-shadow( -3px 3px 1px rgb(15, 15, 20));
+}
+ 
+
+
+
+/* .footer{
+   
+} */
+
+.footer__list{
+   font-size: 0;
+	margin: 0px 0px 0px 220px;
+}
+
+.footer__list>li{
+   position: relative;
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+	padding: 15px;
+
+}
+
+.footer__link{
+display: inline-block;
+font-family: "Gilroy";
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #FFFFFF;
+text-align: center;
+
+}
+.footer__link:hover {
+text-decoration: underline;
+color: #656569;
+text-align: center;
+
+}
+
+
+
